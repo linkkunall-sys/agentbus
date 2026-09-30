@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<title>Accessibility scan report — SAMPLE - a1-builder fixture page (not a client)</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  html { font-size: 9.6pt; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: #16181d; line-height: 1.34; margin: 0; }
+  h1 { font-size: 1.5rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .07em;
+        margin: 1rem 0 .3rem; color: #4a5160; border-bottom: 1px solid #dfe2e8; padding-bottom: .16rem; }
+  p { margin: 0 0 .45rem; }
+  p.finding { margin: 0 0 .5rem; }
+  p.bullet { margin: 0 0 .3rem; }
+  table { width: 100%; border-collapse: collapse; margin: .3rem 0 .5rem; }
+  th, td { text-align: left; vertical-align: top; padding: .24rem .34rem;
+            border-bottom: 1px solid #e6e9ee; font-size: .74rem; }
+  th { background: #f4f6f9; font-weight: 600; }
+  .sample { background: #fff4e0; border: 1px solid #e8b866; padding: .4rem .5rem;
+             margin-bottom: .6rem; font-weight: 600; font-size: .8rem; }
+  section, .page { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+<div class='sample'>SAMPLE RENDER — not a client report. Contact details are placeholders and the scan is a fixture page.</div>
+<h1>Accessibility scan report — SAMPLE - a1-builder fixture page (not a client)</h1><p>Platform scanned: fixture://page · Scan date: 30 September 2026</p><p>Prepared by {{FOUNDER_NAME}}, {{COMPANY_NAME}} · {{FOUNDER_EMAIL}}</p><h2>What we checked</h2><p>1 publicly accessible page was scanned with scanner a1-v1, including fixture://page. 10 findings were recorded.</p><h2>The three things to fix first</h2><p class='finding'>1. **Blind investors are told nothing about this image**</p><p>They can complete it, but only with difficulty and workarounds. A screen reader cannot describe this image, so its information may be lost. Affects: Blind and low-vision people using screen readers. Effort: small. Add concise alt text, or alt=&quot;&quot; if purely decorative.</p><p class='finding'>2. **Investors using screen readers cannot tell what this field is for**</p><p>They can complete it, but only with difficulty and workarounds. The purpose of this field is not announced, making it difficult to know what to enter. Affects: People using screen readers or voice control. Effort: small. Associate a visible &lt;label&gt; with this field.</p><p class='finding'>3. **A button announces no purpose**</p><p>They can complete it, but only with difficulty and workarounds. Assistive technology cannot tell the person what this button does. Affects: Screen-reader users. Effort: small. Give the button visible text or an accessible name.</p><h2>Full findings</h2><table><thead><tr><th>#</th><th>What it is</th><th>Where</th><th>Who it affects</th><th>How to fix</th><th>Effort</th><th>For developers</th></tr></thead><tbody><tr><td>F-001</td><td>Blind investors are told nothing about this image</td><td>fixture://page · element img</td><td>Blind and low-vision people using screen readers</td><td>Add concise alt text, or alt=&quot;&quot; if purely decorative.</td><td>small</td><td>Web Content Accessibility Guidelines (WCAG) 1.1.1 (A)</td></tr><tr><td>F-002</td><td>Investors using screen readers cannot tell what this field is for</td><td>fixture://page · element input</td><td>People using screen readers or voice control</td><td>Associate a visible &lt;label&gt; with this field.</td><td>small</td><td>WCAG 1.3.1, 4.1.2 (A)</td></tr><tr><td>F-003</td><td>A button announces no purpose</td><td>fixture://page · element button</td><td>Screen-reader users</td><td>Give the button visible text or an accessible name.</td><td>small</td><td>WCAG 4.1.2 (A)</td></tr><tr><td>F-004</td><td>A link announces no destination</td><td>fixture://page · element a</td><td>Screen-reader users</td><td>Provide link text or meaningful alternative text for its image.</td><td>small</td><td>WCAG 2.4.4 (A)</td></tr><tr><td>F-005</td><td>Embedded content is announced with no name</td><td>fixture://page · element iframe</td><td>Screen-reader users</td><td>Add a concise title to the iframe.</td><td>small</td><td>WCAG 4.1.2 (A)</td></tr><tr><td>F-007</td><td>The page does not declare its language</td><td>fixture://page · element html</td><td>Screen-reader users</td><td>Set the correct lang attribute on the html element.</td><td>small</td><td>WCAG 3.1.1 (A)</td></tr><p>The table lists the 6 highest-severity findings. All 10 findings, including the remaining 4, are listed in full in the companion findings file supplied with this report.</p></tbody></table><h2>What we did not check</h2><p>Pages behind a login were not checked, because the scanner submits no forms and uses no credentials. Not reachable in this scan: account, portfolio and transaction pages. This is an automated scan of publicly accessible pages. It finds a subset of issues and does not replace testing with a person using a screen reader.</p><h2>What happens next</h2><p>We can fix these findings, re-scan to confirm each one is closed, and set up monitoring so new pages are checked as they ship. The annual accessibility audit the regulator expects then falls out of the same cycle. Reply to this email and we will scope the first batch.</p><h2>Contact</h2><p>{{FOUNDER_NAME}}</p><p>{{FOUNDER_EMAIL}}</p><p>{{FOUNDER_PHONE}}</p><p>{{FOUNDER_NAME}} · 30 September 2026</p>
+</body>
+</html>
