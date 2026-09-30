@@ -1,0 +1,196 @@
+{
+  "scan": {
+    "url": "fixture://page",
+    "started_at": "2026-09-30T00:00:00Z",
+    "scanner_version": "a1-v1",
+    "pages_scanned": 1,
+    "pages_failed": 0
+  },
+  "summary": {
+    "total_findings": 10,
+    "by_severity": {
+      "critical": 0,
+      "serious": 8,
+      "moderate": 2,
+      "minor": 0
+    },
+    "top_three": [
+      "F-001",
+      "F-002",
+      "F-003"
+    ]
+  },
+  "findings": [
+    {
+      "rule": "image-alt",
+      "wcag": [
+        "1.1.1"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "img",
+      "evidence": "<img src=\"chart.png\">",
+      "what_happens": "A screen reader cannot describe this image, so its information may be lost.",
+      "who_is_affected": "Blind and low-vision people using screen readers",
+      "how_to_fix": "Add concise alt text, or alt=\"\" if purely decorative.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-001"
+    },
+    {
+      "rule": "label",
+      "wcag": [
+        "1.3.1",
+        "4.1.2"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "input",
+      "evidence": "<input {'type': 'text'}>",
+      "what_happens": "The purpose of this field is not announced, making it difficult to know what to enter.",
+      "who_is_affected": "People using screen readers or voice control",
+      "how_to_fix": "Associate a visible <label> with this field.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-002"
+    },
+    {
+      "rule": "button-name",
+      "wcag": [
+        "4.1.2"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "button",
+      "evidence": "<button {'aria-hidden': 'true'}>",
+      "what_happens": "Assistive technology cannot tell the person what this button does.",
+      "who_is_affected": "Screen-reader users",
+      "how_to_fix": "Give the button visible text or an accessible name.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-003"
+    },
+    {
+      "rule": "link-name",
+      "wcag": [
+        "2.4.4"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "a",
+      "evidence": "<a><img></a>",
+      "what_happens": "The link destination is not announced, so the person cannot decide whether to follow it.",
+      "who_is_affected": "Screen-reader users",
+      "how_to_fix": "Provide link text or meaningful alternative text for its image.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-004"
+    },
+    {
+      "rule": "frame-title",
+      "wcag": [
+        "4.1.2"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "iframe",
+      "evidence": "<iframe src=\"about:blank\">",
+      "what_happens": "The embedded area has no announced name or purpose.",
+      "who_is_affected": "Screen-reader users",
+      "how_to_fix": "Add a concise title to the iframe.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-005"
+    },
+    {
+      "rule": "td-headers",
+      "wcag": [
+        "1.3.1"
+      ],
+      "impact": "moderate",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "table",
+      "evidence": "<table>…<td>",
+      "what_happens": "The data has no identified column or row headings, so relationships are unclear.",
+      "who_is_affected": "Screen-reader users reading tabular data",
+      "how_to_fix": "Mark header cells with <th> and appropriate scope.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-006"
+    },
+    {
+      "rule": "html-has-lang",
+      "wcag": [
+        "3.1.1"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "html",
+      "evidence": "<html>",
+      "what_happens": "The page language is unknown, so spoken content may be pronounced incorrectly.",
+      "who_is_affected": "Screen-reader users",
+      "how_to_fix": "Set the correct lang attribute on the html element.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-007"
+    },
+    {
+      "rule": "heading-order",
+      "wcag": [
+        "1.3.1"
+      ],
+      "impact": "moderate",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "heading",
+      "evidence": "<h2>…</h2><h4>…</h4>",
+      "what_happens": "The section outline skips a level, making it harder to understand the page structure.",
+      "who_is_affected": "People navigating by headings",
+      "how_to_fix": "Use heading levels in a logical sequence.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-008"
+    },
+    {
+      "rule": "keyboard",
+      "wcag": [
+        "2.1.1"
+      ],
+      "impact": "serious",
+      "level": "A",
+      "page": "fixture://page",
+      "selector": "div",
+      "evidence": "<div onclick=\"…\">",
+      "what_happens": "This menu control may not be usable from the keyboard.",
+      "who_is_affected": "Keyboard-only users",
+      "how_to_fix": "Use a native button and support keyboard activation.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-009"
+    },
+    {
+      "rule": "color-contrast",
+      "wcag": [
+        "1.4.3"
+      ],
+      "impact": "serious",
+      "level": "AA",
+      "page": "fixture://page",
+      "selector": ".low-contrast",
+      "evidence": ".low-contrast { color: #aaa; background: #fff",
+      "what_happens": "This text is difficult to distinguish from its background.",
+      "who_is_affected": "People with low vision or reading in bright conditions",
+      "how_to_fix": "Increase text/background contrast to at least 4.5 to 1.",
+      "effort": "small",
+      "verified": false,
+      "id": "F-010"
+    }
+  ]
+}
